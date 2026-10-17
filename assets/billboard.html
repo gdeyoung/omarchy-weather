@@ -1,0 +1,65 @@
+<!doctype html>
+<!-- Source for preview.png (house billboard style, 2000x1125). Render with:
+     chromium --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=1 \
+       --window-size=2000,1125 --allow-file-access-from-files \
+       --screenshot=../preview.png "file://$PWD/assets/billboard.html"
+-->
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:2000px;height:1125px;overflow:hidden}
+body{background:#0d0f14;font-family:"JetBrainsMono Nerd Font","JetBrains Mono",monospace;color:#eef4f0;position:relative}
+.left{position:absolute;left:100px;top:118px;width:820px}
+.eyebrow{font-size:26px;font-weight:700;letter-spacing:6px;color:#f7d97f}
+h1{margin-top:34px;font-family:"Inter","Geist",system-ui,sans-serif;font-size:84px;font-weight:800;letter-spacing:-2px;line-height:1.08;color:#f4f8f5}
+.para{margin-top:34px;font-size:22px;line-height:1.65;color:#a8b4ae;max-width:760px}
+.cols{margin-top:44px;display:flex;gap:70px}
+ul{list-style:none;width:360px}
+li{font-size:20px;line-height:1.5;color:#d7e2db;padding-left:30px;position:relative;margin-bottom:16px}
+li::before{content:"\25C6";position:absolute;left:0;color:#f7d97f;font-size:14px;top:5px}
+.footer{position:absolute;left:100px;bottom:66px;width:820px}
+.footer .rule{height:1px;background:#2a2f36;margin-bottom:20px}
+.footer .row{display:flex;justify-content:space-between;font-size:18px;color:#77827c}
+.right{position:absolute;left:1040px;top:0;width:960px;height:1125px}
+.card{position:absolute;border-radius:12px;overflow:hidden;border:1px solid #2a2f36;box-shadow:0 24px 70px rgba(0,0,0,.6)}
+.card img{display:block}
+.cap{position:absolute;font-size:17px;font-weight:700;letter-spacing:3px;color:#77827c}
+.c1{left:60px;top:130px;width:420px}
+.c1 img{width:420px;height:auto}
+.c2{left:500px;top:430px;width:440px;z-index:-1}
+.c2 img{width:440px;height:auto}
+.cap1{left:60px;top:96px}
+.cap2{left:500px;top:396px}
+</style></head><body>
+<div class="left">
+ <div class="eyebrow">WEATHERX / GDEYOUNG</div>
+ <h1>Weather without<br>API keys.</h1>
+ <div class="para">Extended weather for the Omarchy bar: pinned places as tabs, current
+ conditions with AQI and dew point, an hourly strip, a 7-day forecast, and a
+ live keyless radar loop over Esri + RainViewer tiles. Open-Meteo data, no
+ accounts, no keys.</div>
+ <div class="cols">
+  <ul>
+   <li>Pinned places as tabs</li>
+   <li>Live keyless radar (Esri + RainViewer)</li>
+   <li>AQI, UV, dew point, pressure</li>
+   <li>Hourly strip + 7-day forecast</li>
+  </ul>
+  <ul>
+   <li>Open-Meteo &mdash; no API keys</li>
+   <li>Follows the device location</li>
+   <li>Theme accent &amp; density</li>
+   <li>Drop-in for omarchy.weather</li>
+  </ul>
+ </div>
+</div>
+<div class="footer">
+ <div class="rule"></div>
+ <div class="row"><span>No keys, no accounts, just weather.</span><span style="color:#f7d97f">gdeyoung.weather v0.3.0</span><span>gdeyoung/omarchy-weather</span></div>
+</div>
+<div class="right">
+ <div class="cap cap1">THE PANEL</div>
+ <div class="card c1"><img src="weather-panel.png"></div>
+ <div class="cap cap2">CURRENT &middot; HOURLY</div>
+ <div class="card c2"><img src="weather-top.png"></div>
+</div>
+</body></html>
